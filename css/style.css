@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  size: 62.5%; /* resize rem to be 10 px*/
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-form {
+  width: 90%;
+  height: 80%;
+  background-color: #ddd;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.2);
+  display: flex;
+}
+.container-form .left {
+  background: linear-gradient(
+    207deg,
+    rgba(34, 177, 195, 1) 10%,
+    rgba(45, 97, 253, 1) 100%
+  );
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-form .right {
+  background-color: white;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container-form .right h2 {
+  margin-top: 9.5rem;
+  margin-left: 1rem;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  font-family: "work sans";
+}
+.container-form .right .input-box {
+  position: relative;
+  margin: 2rem 0;
+}
+.container-form .right .input-box label {
+  position: absolute;
+  width: auto;
+  top: 15%;
+  left: 0.7rem;
+  font: 1rem;
+}
+.container-form .right .input-box i {
+  position: absolute;
+  left: 90%;
+  top: 15%;
+}
+.container-form .right .input-box input[type="email"],
+input[type="password"] {
+  width: 17rem;
+  height: 2.2rem;
+  outline: none;
+  background-color: #f8f9fd;
+  border: 1px solid #e0e1e5;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  padding: 0 10px;
+}
+.container-form .right .input-box input:focus ~ label {
+  top: -35%;
+  background-color: white;
+  transition-duration: 0.4s;
+}
+
+.container-form .right .group {
+  display: flex;
+  justify-content: space-between;
+}
+.container-form .right .group a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #7c7c7c;
+}
+.container-form .right button {
+  width: 17rem;
+  height: 2.2rem;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  background-color: #2887e1;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border: none;
+}
+.container-form .right button:hover {
+  background-color: #0e80eb;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transition-duration: 0.6s;
+}
+.container-form .right .group {
+  margin-top: 1rem;
+}
+.container-form .right .register {
+  margin-top: 50%;
+  text-align: center;
+  color: #7c7c7c;
+}
+.container-form .right .register a {
+  text-decoration: none;
+  color: #0e80eb;
+}
+
+/* make page responsive*/
+@media (max-width: 640px) {
+  .container-form .right {
+    width: 100%;
+    background: linear-gradient(
+      207deg,
+      rgba(34, 177, 195, 1) 10%,
+      rgba(45, 97, 253, 1) 100%
+    );
+  }
+  .container-form .right .input-box input:focus ~ label {
+    background-color: transparent;
+    top: -60%;
+  }
+  .container-form .right h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20%;
+    font-weight: 900;
+  }
+  .container-form .right .input-box input[type="email"],
+  input[type="password"],
+  button {
+    width: 100%;
+  }
+  .container-form .left,
+  img {
+    width: 0;
+  }
+  .container-form .right button {
+    color: black;
+    background-color: white;
+  }
+  .container-form .right .group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+  }
+  .container-form .right .group a {
+    margin: 3rem 0;
+    font-size: 1.2rem;
+    color: white;
+  }
+  .container-form .right .register {
+    margin-top: 10%;
+    color: black;
+  }
+  .container-form .right .register a {
+    color: white;
+  }
+}
